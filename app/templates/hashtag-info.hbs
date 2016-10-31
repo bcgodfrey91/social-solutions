@@ -1,0 +1,10 @@
+<h2>Hashtag Info</h2>
+
+<div class="reminders">
+    {{#each model as |hashtag|}}
+      <p class="spec-reminder-item">{{hashtag.author}}</p>
+      <p class="spec-reminder-date">{{hashtag.created}}</p>
+      <p class="spec-reminder-date">{{hashtag.count}}</p>
+    {{/each}}
+    {{outlet}}
+  </div>

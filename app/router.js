@@ -7,6 +7,9 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('hashtag-info', { path: '/' }, function() {
+    this.route('hashtag');
+  });
 });
 
 export default Router;
