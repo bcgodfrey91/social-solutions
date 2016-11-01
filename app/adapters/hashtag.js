@@ -1,5 +1,5 @@
 import DS from 'ember-data';
 
 export default DS.JSONAPIAdapter.extend({
-  namespace: '/api/tweets-for-user/benthehuman?count=10'
+  namespace: 'api/tweets-for-hashtag/'
 });

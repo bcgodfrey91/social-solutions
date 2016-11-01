@@ -1,0 +1,11 @@
+<h2>Hashtag Info</h2>
+
+<div class="hashtag-info">
+  {{#each model as |tweet|}}
+  <article>
+    <blockquote>{{tweet.text}}</blockquote>
+    <cite>&mdash; {{tweet.user.name}} (@{{tweet.user.screen_name}})</cite>
+  </article>
+  {{/each}}
+  {{outlet}}
+</div>
