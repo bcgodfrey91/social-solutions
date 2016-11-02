@@ -3,7 +3,12 @@
 <div class="hashtag-info">
   {{#each model as |tweet|}}
   <article>
-    <blockquote> <h3>Name:</h3> {{tweet.user.name}} <h3>Location:</h3> {{tweet.user.location}} <h3>TimeZone:</h3>{{tweet.user.time_zone}} <h3>Followers:</h3> {{tweet.user.followers_count}} <h3>Verified:</h3> {{tweet.user.verified}} </blockquote><br/>
+    <blockquote>
+      <h3>User:</h3> {{tweet.user.name}}
+      <h3>Text:</h3> {{tweet.text}}
+      <h3>Followers:</h3> {{tweet.user.followers_count}}
+      <h3>Verified:</h3> {{tweet.user.verified}}
+    </blockquote><br/>
   </article>
   {{/each}}
   {{outlet}}

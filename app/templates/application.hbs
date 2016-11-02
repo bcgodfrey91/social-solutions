@@ -1,5 +1,8 @@
 <div class="application template">
-  <h1>Welcome to Social Solutions</h1>
-  <input placeholder="Search for any Twitter hashtag" /><button>Search</button>
+{{#link-to "application"}}
+  <h1>Social Solutions</h1>
+{{/link-to}}
+  {{input type='search' value=value key-up=(action 'updateSearch')}}
+  <button {{action "searchForParam" on="click"}}>Search</button>
   {{outlet}}
 </div>
