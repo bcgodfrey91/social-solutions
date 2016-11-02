@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import _ from 'lodash/lodash';
 
 export default Ember.Controller.extend({
   search: null,
@@ -9,7 +10,7 @@ export default Ember.Controller.extend({
       this.set('search', search)
     },
     searchForParam() {
-      this.transitionToRoute('hashtag', this.search)
+      this.transitionToRoute('hashtag', '#' + this.search)
     }
   }
 });
