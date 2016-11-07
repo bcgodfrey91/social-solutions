@@ -1,15 +1,17 @@
 <h2>Hashtag Info</h2>
 
 <div class="hashtag-info">
-  {{#each model as |tweet|}}
   <article>
-    <blockquote>
-      <h3>User:</h3> {{tweet.user.name}}
-      <h3>Text:</h3> {{tweet.text}}
-      <h3>Followers:</h3> {{tweet.user.followers_count}}
-      <h3>Verified:</h3> {{tweet.user.verified}}
-    </blockquote><br/>
+      <h3>isVerified:</h3> {{isVerified.length}}
   </article>
-  {{/each}}
+
+  <article>
+    <h3>userLocations:</h3>
+    {{#each model as |tweet|}}
+      {{tweet.renderLocations}}
+    <br/>
+    {{/each}}
+  </article>
+
   {{outlet}}
 </div>
