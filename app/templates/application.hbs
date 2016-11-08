@@ -4,5 +4,10 @@
 {{/link-to}}
   {{input type='search' value=value key-up=(action 'updateSearch')}}
   <button {{action "searchForParam" on="click"}}>Search</button>
+  
+  {{user-graph}}
+
+
+
   {{outlet}}
 </div>
