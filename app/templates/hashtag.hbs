@@ -1,6 +1,8 @@
 <h2>Hashtag Info</h2>
 
 <div class="hashtag-info">
+  {{user-graph}}
+
   <article>
       <h1>Verified Users:</h1> {{isVerified.length}} {{findVerifiedUsers}}
       <h1>Lowest Follower Amount:</h1> {{getMinFollowers}}
@@ -8,7 +10,7 @@
       <h1>Average Number of Followers:</h1> {{findAverageFollowers}}
 
   </article>
-<!-- 
+<!--
   <article>
     <h3>userLocations:</h3>
     {{#each uniqLocations as |location|}}
