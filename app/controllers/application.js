@@ -6,9 +6,10 @@ export default Ember.Controller.extend({
 
   actions: {
     updateSearch(search) {
-      this.set('search', search)
+      this.set('search', search.replace(/ +/,''))
     },
     searchForParam() {
+      this.store.unloadAll()
       this.transitionToRoute('hashtag', '#' + this.search)
     }
   }

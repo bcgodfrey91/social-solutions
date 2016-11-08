@@ -2,16 +2,20 @@
 
 <div class="hashtag-info">
   <article>
-      <h3>isVerified:</h3> {{isVerified.length}}
-  </article>
+      <h1>Verified Users:</h1> {{isVerified.length}} {{findVerifiedUsers}}
+      <h1>Lowest Follower Amount:</h1> {{getMinFollowers}}
+      <h1>Highest Follower Amount:</h1> {{getMaxFollowers}}
+      <h1>Average Number of Followers:</h1> {{findAverageFollowers}}
 
+  </article>
+<!-- 
   <article>
     <h3>userLocations:</h3>
-    {{#each model as |tweet|}}
-      {{tweet.renderLocations}}
+    {{#each uniqLocations as |location|}}
+      <h3>{{location}}</h3>
     <br/>
     {{/each}}
-  </article>
+  </article> -->
 
   {{outlet}}
 </div>
