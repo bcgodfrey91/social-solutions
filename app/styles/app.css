@@ -1,0 +1,37 @@
+html {
+  background-color: #191919;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+}
+
+input.ember-view.ember-text-field {
+  display: flex;
+  height: 200px;
+  width: 700px;
+  font-size: 50px;
+}
+
+button {
+  height: 50px;
+  width: 300px;
+  font-size: 30px;
+  background-color: #191919;
+  border-color: #7F7FFF;
+  color: #7F7FFF;
+}
+
+h1 {
+  color: #7F7FFF;
+  font-size: 100px;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2 {
+  color: #7F7FFF;
+  font-size: 50px;
+}

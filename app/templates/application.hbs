@@ -1,8 +1,13 @@
-<div class="application template">
-{{#link-to "application"}}
-  <h1>Social Solutions</h1>
+<div class='application-home'>
+{{#link-to 'application'}}
+  <h1 class='home' {{action 'goHome' on='click'}}>Social Solutions</h1>
 {{/link-to}}
-  {{input type='search' value=value key-up=(action 'updateSearch')}}
-  <button {{action "searchForParam" on="click"}}>Search</button>
+{{#if onHome}}
+  {{input class='search-bar' type='search' value=value key-up=(action 'updateSearch')}}
+  <br/>
+  <button class='search-buttton' {{action 'searchForParam' on='click'}}>Search</button>
+{{/if}}
+
+
   {{outlet}}
 </div>
