@@ -3,20 +3,26 @@
 <div class="hashtag-info">
 
   <article>
-      <h1>Verified Users:</h1> {{isVerified.length}} {{findVerifiedUsers}}
-      <h1>Lowest Follower Amount:</h1> {{getMinFollowers}}
-      <h1>Highest Follower Amount:</h1> {{getMaxFollowers}}
-      <h1>Average Number of Followers:</h1> {{findAverageFollowers}}
+
+      <article>
+            {{user-graph
+              data=lessThanTenThousand
+              max=getMaxFollowers
+              value=lessThanFiveThousand
+            }}
+      </article>
+      <br/>
+      <article>
+            {{follower-graph
+              lessThanOneThousand=lessThanOneThousand
+               oneToFive=oneToFive
+               fiveToTen=fiveToTen
+               tenToFifty=tenToFifty
+               fiftyUp=fiftyUp
+             }}
+      </article>
 
   </article>
-<!--
-  <article>
-    <h3>userLocations:</h3>
-    {{#each uniqLocations as |location|}}
-      <h3>{{location}}</h3>
-    <br/>
-    {{/each}}
-  </article> -->
 
   {{outlet}}
 </div>
