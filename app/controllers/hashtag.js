@@ -38,21 +38,5 @@ export default Ember.Controller.extend({
 
     return (sumAllFollowers / 100).toFixed(0)
   }),
-  pieData: computed('isVerified', 'getFollowers', function(){
-    return {
-      labels: ['Red', "Green", "Yellow"],
-      datasets: [
-        {
-          data: [
-            get(this, 'isVerified'),
-            get(this, 'getFollowers')
-
-          ]
-          backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C"],
-          hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870"]
-        }
-      ]
-    };
-  }),
   uniqLocations: computed.uniq('userLocations')
 });

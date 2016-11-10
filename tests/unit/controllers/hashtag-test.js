@@ -6,7 +6,9 @@ moduleFor('controller:hashtag', 'Unit | Controller | hashtag', {
 });
 
 // Replace this with your real tests.
-test('it exists', function(assert) {
-  let controller = this.subject();
-  assert.ok(controller);
-});
+test('should grab tweets', function(assert) {
+
+  const ctrl = this.subject()
+
+  assert.equal(ctrl.get(this, 'tweets'), 100, 'Got 100 tweets')
+})
